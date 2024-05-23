@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const frens = [
+    {'name':'Saurabh', 'place':'Benglur', 'color':"Blue"},
+    {'name':'Base', 'place':'Champapet', 'color':"Magenta"},
+    {'name':'Winni', 'place':'Sanga', 'color':"Green"},
+    {'name':'Kobs', 'place':'Asan', 'color':"Purple"},
+  ];
+  const listFrens = frens.map(fren =>
+      <li style={{color:fren.color}}>
+        {fren.name}
+      </li>
+  );
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <h1>Frens</h1>
+        <ul>{listFrens}</ul>
+      </>
+
   );
 }
 
