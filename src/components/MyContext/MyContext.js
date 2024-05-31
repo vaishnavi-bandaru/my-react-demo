@@ -15,7 +15,7 @@ function Form() {
   return (
     <Panel title="Welcome">
       <Button>Sign up</Button>
-      <ThemeContext.Provider value="dark">
+      <ThemeContext.Provider value="light">
         <Button>Log in</Button>
       </ThemeContext.Provider>
     </Panel>

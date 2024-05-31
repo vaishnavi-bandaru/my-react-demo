@@ -1,6 +1,7 @@
 import './App.css';
 import MyButton from './components/MyButton/MyButton';
 import MyApp from './components/MyContext/MyContext';
+import Counter from './components/MyRef/MyRef';
 
 export default function App() {
     const clicked = true
@@ -24,7 +25,8 @@ export default function App() {
             {/* <h1>Frens</h1>
         <ul>{listFrens}</ul> */}
             {/* <MyButton name={buttonName} showText={clicked}/> */}
-            <MyApp/>
+            {/* <MyApp/> */}
+            <Counter/>
             {/* <MyButton name={buttonName} showText={clicked}/> */}
         </>
 
