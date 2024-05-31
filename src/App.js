@@ -1,5 +1,6 @@
 import './App.css';
 import MyButton from './components/MyButton/MyButton';
+import MyApp from './components/MyContext/MyContext';
 
 export default function App() {
     const clicked = true
@@ -20,9 +21,10 @@ export default function App() {
 
     return (
         <>
-            <h1>Frens</h1>
-            <ul>{listFrens}</ul>
-            <MyButton name={buttonName} showText={clicked}/>
+            {/* <h1>Frens</h1>
+        <ul>{listFrens}</ul> */}
+            {/* <MyButton name={buttonName} showText={clicked}/> */}
+            <MyApp/>
             {/* <MyButton name={buttonName} showText={clicked}/> */}
         </>
 
