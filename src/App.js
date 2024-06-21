@@ -76,6 +76,7 @@ export default function App() {
             {/* <MyReducer></MyReducer> */}
 
             <MyPortal></MyPortal>
+            <MyButton></MyButton>
 
         </>
     );
