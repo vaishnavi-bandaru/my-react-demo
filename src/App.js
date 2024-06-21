@@ -7,6 +7,7 @@ import { createTodos } from "./utils.js";
 import TodoList from "./components/MyTodo/TodoList.js";
 import ProductPage from "./components/MyCallback/ProductPage.js";
 import { MyReducer } from "./components/MyReducer/MyReducer.js";
+import MyPortal from "./components/MyPortal/MyPortal.js";
 
 const todos = createTodos();
 
@@ -72,7 +73,10 @@ export default function App() {
 
       </ProductPage> */}
 
-            <MyReducer></MyReducer>
+            {/* <MyReducer></MyReducer> */}
+
+            <MyPortal></MyPortal>
+
         </>
     );
 }
