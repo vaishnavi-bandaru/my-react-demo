@@ -8,6 +8,9 @@ import TodoList from "./components/MyTodo/TodoList.js";
 import ProductPage from "./components/MyCallback/ProductPage.js";
 import { MyReducer } from "./components/MyReducer/MyReducer.js";
 import MyPortal from "./components/MyPortal/MyPortal.js";
+import ErrorBoundary from './components/MyErrorBoundary/ErrorBoundary.js'
+import BuggyCounter from './components/MyErrorBoundary/BuggyCounter.js'
+
 
 const todos = createTodos();
 
@@ -75,8 +78,31 @@ export default function App() {
 
             {/* <MyReducer></MyReducer> */}
 
-            <MyPortal></MyPortal>
-            <MyButton></MyButton>
+            {/* <MyPortal></MyPortal>
+      <MyButton></MyButton> */}
+
+            <div>
+                <p>
+                    <b>
+                        This is an example of error boundaries in React 16.
+                        <br /><br />
+                        Click on the numbers to increase the counters.
+                        <br />
+                        The counter is programmed to throw when it reaches 5. This simulates a JavaScript error in a component.
+                    </b>
+                </p>
+                <hr />
+                <ErrorBoundary>
+                    <p>These two counters are inside the same error boundary. If one crashes, the error boundary will replace both of them.</p>
+                    <BuggyCounter />
+                    <BuggyCounter />
+                </ErrorBoundary>
+                <hr />
+                <p>These two counters are each inside of their own error boundary. So if one crashes, the other is not affected.</p>
+                <ErrorBoundary><BuggyCounter /></ErrorBoundary>
+                <ErrorBoundary><BuggyCounter /></ErrorBoundary>
+
+            </div>
 
         </>
     );
